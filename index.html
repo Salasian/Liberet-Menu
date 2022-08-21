@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liberet Menu</title>
+    <!-- Gotham Font -->
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <ul class="nav justify-content-center mt-5 mb-2">
+      <li class="nav-item">
+        <img src="img/location-pin.png" class="location-img" alt="" />
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-location border border-0 nav-btn"
+          onclick="alert('Usted presiono Location')"
+        >
+          Select location...
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-filter border border-0 nav-btn">
+          <img src="img/filter-results-button.png" class="filter-img" alt="" />
+        </button>
+      </li>
+    </ul>
+    <!-- Separator -->
+    <div class="separator"></div>
+    <!-- Days -->
+    <section class="days">
+      <div class="d-flex justify-content-center days-list">
+        <div class="mx-3 mb-2">
+          <p>Dom</p>
+          <button class="day-btn nav-btn">28</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Lun</p>
+          <button class="day-btn nav-btn">29</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Mar</p>
+          <button class="day-btn nav-btn">30</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Mie</p>
+          <button class="day-btn nav-btn">01</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Jue</p>
+          <button class="day-btn nav-btn">02</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Vie</p>
+          <button class="day-btn nav-btn">03</button>
+        </div>
+        <div class="mx-3 mb-2">
+          <p>Sab</p>
+          <button class="day-btn nav-btn">04</button>
+        </div>
+      </div>
+    </section>
+    <!-- Product section -->
+    <div class="bg-grey">
+      <!-- Chips -->
+      <section class="justify-content-center chips-section">
+        <div
+          class="d-flex justify-content-center chips-flex-container chips-center"
+        >
+          <button class="p-2 mx-2 chip flex-fill hour-btn">
+            <img src="img/clock.png" class="chips-img" alt="" />
+            <span class="hour-chip">11:00am - 12:00pm</span>
+          </button>
+          <button class="p-2 mx-2 chip flex-fill restaurant-btn">
+            <img src="img/restaurant.png" class="chips-img" alt="" />
+            <span class="place-chip">Beef</span>
+          </button>
+          <button
+            class="p-2 mx-2 chip flex-fill"
+            onclick="alert('Presionó la alerta de platillos')"
+          >
+            <span class="plus-one">+1</span>
+            <span class="dishes-chip">Platillos</span>
+          </button>
+        </div>
+      </section>
+      <!-- Dishes -->
+      <section class="dishes container my-4">
+        <div class="row">
+          <article class="col-4 p-0 my-3">
+            <div class="dish">
+              <div class="dish-showup">
+                <img src="img/apoyo.jpg" class="dish-img" alt="dish" />
+                <span class="dish-left">Quedan 5</span>
+                <div class="dish-info">
+                  Banquete Providencia <br /><span class="yellow-text"
+                    >Caldo de pollo</span
+                  >
+                </div>
+              </div>
+              <div class="dish-price d-flex">
+                <div>
+                  <img
+                    src="img/clock.png"
+                    class="chips-img ml-2 mr-2"
+                    alt="clock"
+                  />
+                </div>
+                <div class="ml-5">$70.00</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Hour Chip -->
+      <section class="modal-hour hide">
+        <div class="d-flex flex-column">
+          <div class="my-2 modal-info">
+            <img src="img/clock.png" class="chips-img" alt="" />
+            <p class="modal-paragraph">Elige un horario de entrega</p>
+          </div>
+          <div class="modal-btns">
+            <button class="modal-btn col my-2 hour-modal-btn active-modal">
+              11:00pm-12:00 pm
+            </button>
+            <button class="modal-btn col my-2 hour-modal-btn">
+              1:00pm-2:00 pm
+            </button>
+            <button class="modal-btn col my-2 hour-modal-btn">
+              2:00pm-3:00pm
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Restaurant Chip -->´
+      <section class="modal-restaurant hide">
+        <div class="d-flex flex-column">
+          <div class="my-2 modal-info">
+            <img src="img/restaurant.png" class="chips-img" alt="" />
+            <p class="modal-paragraph-restaurant">Elige un Servicio</p>
+          </div>
+          <div class="modal-btns restaurant-btns">
+            <button
+              class="modal-btn col my-2 active-modal restaurant-modal-btn"
+            >
+              Cocina Industrial
+            </button>
+            <button class="modal-btn col my-2 restaurant-modal-btn">
+              Cocina económica
+            </button>
+            <button class="modal-btn col my-2 restaurant-modal-btn">
+              Abarrotes
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="footer-nav">
+      <div class="d-flex justify-content-center footer-container">
+        <a class="footer-btn flex-fill" href="cart.html">
+          <img
+            src="img/shopping-cart.png"
+            class="chips-img footer-img"
+            alt=""
+          />
+        </a>
+        <a class="footer-btn flex-fill" href="index.html">
+          <img
+            src="img/menu.png"
+            class="chips-img footer-img"
+            alt=""
+            onclick="window.scrollTo(0, 0)"
+          />
+        </a>
+        <a class="footer-btn flex-fill profile-btn" href="perfil.html">
+          <img src="img/user.png" class="chips-img footer-img" alt="" />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>

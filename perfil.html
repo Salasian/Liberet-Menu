@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+  </head>
+  <!-- Gotham Font -->
+  <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css" />
+  <body>
+    <div class="d-flex">
+      <div class="col-4 dia">a</div>
+      <div class="col-4 periodo">s</div>
+      <div class="col-4 categoria">d</div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer-nav">
+      <div class="d-flex justify-content-center footer-container">
+        <a class="footer-btn flex-fill" href="cart.html">
+          <img
+            src="img/shopping-cart.png"
+            class="chips-img footer-img"
+            alt=""
+          />
+        </a>
+        <a class="footer-btn flex-fill" href="index.html">
+          <img src="img/menu.png" class="chips-img footer-img" alt="" />
+        </a>
+        <a class="footer-btn flex-fill profile-btn yellow" href="perfil.html">
+          <img src="img/user.png" class="chips-img footer-img" alt="" />
+        </a>
+      </div>
+    </footer>
+    <script>
+      //parametros de la URL
+      const params = new URLSearchParams(window.location.search);
+      //Arreglo Auxiliar
+      const arreglo = ['11:00pm-12:00pm', '1:00pm-2:00pm', '2:00pm-3:00pm'];
+      //Elementos del DOM seleccionados
+      const dia = document.querySelector('.dia');
+      const periodo = document.querySelector('.periodo');
+      const categoria = document.querySelector('.categoria');
+      //Valores integrados a los elementos
+      dia.textContent = params.get('dia') == null ? 28 : params.get('dia');
+      periodo.textContent =
+        arreglo[params.get('periodo')] == null
+          ? arreglo[0]
+          : arreglo[params.get('periodo')];
+      categoria.textContent =
+        params.get('categoria') == null ? 'Beef' : params.get('categoria');
+    </script>
+  </body>
+</html>
